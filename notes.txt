@@ -1,0 +1,90 @@
+Structure
+
+Backend/
+├── config/                  # Configuration files (e.g., database, environment variables)
+│   └── db.js                # MongoDB connection logic
+├── controllers/             # Application logic for each route
+│   └── userController.js    # Controller for user-related operations
+├── middleware/              # Custom middleware functions
+│   └── authMiddleware.js    # Middleware for authentication
+├── models/                  # Mongoose models
+│   └── User.js              # User model schema
+├── routes/                  # Route definitions
+│   └── userRoutes.js        # Routes for user endpoints
+├── utils/                   # Utility functions
+│   └── errorHandler.js      # Generic error handling logic
+├── .env                     # Environment variables
+├── .gitignore               # Files and folders to ignore in Git
+├── index.js                 # Main server file
+├── package.json             # Dependencies and project metadata
+└── README.md                # Project documentation
+
+
+
+Controllers ->
+
+======================================================
+express -> It is a fast, minimal, and flexible web application framework for Node.js.
+        -> It is widely used to build web applications and APIs.
+        -> It simplifies server-side development by 
+           providing robust features for routing, middleware, and more.
+
+    Routing: Define application routes with HTTP methods and URL paths.
+
+        EX: app.get('/about', (req, res) => res.send('About Page'));
+            app.post('/submit', (req, res) => res.send('Form Submitted'));
+
+    Middleware: Functions that execute during request processing, e.g., for logging, authentication, or data parsing.
+        EX: app.use(express.json()); // Parse JSON body
+
+    Static Files: Serve static files like images, CSS, or JavaScript.
+
+        EX: app.use(express.static('public'));
+---------------------------------------------------------------
+
+nodemon -> It is a tool that helps develop Node.js based applications by
+           automatically restarting the node application
+           when file changes in the directory are detected.
+
+---------------------------------------------------------------
+
+mongoose -> It is an Object Data Modeling (ODM) library for MongoDB and Node.js.
+         -> It provides a straightforward, schema-based solution to model your 
+            application data and includes features like schema validation,
+            query building, and middleware.
+
+--------------------------------------------------------------
+
+Models -> models are defined using schemas, which represent 
+          the structure of the documents in a MongoDB collection.
+       -> A model provides an interface to interact with the database,
+          allowing you to perform operations like creating, reading, updating,
+          and deleting documents.
+
+--------------------------------------------------------------
+
+Middleware -> Middleware in Express.js is a function that executes
+              during the lifecycle of an HTTP request to your server.
+           -> Middleware functions have access to the request object (req), response object (res), and
+              the next middleware function in the application’s request-response cycle.
+           -> Middleware is used to modify req and res objects, perform tasks like
+              authentication, logging, error handling, etc.,
+              or terminate the request-response cycle by sending a response.
+
+---------------------------------------------------------------
+
+
+Controllers -> Controllers are responsible for handling the logic of your application.
+            -> They process the incoming requests, interact with the database (via models),
+               and return appropriate responses.
+            -> Controllers keep your route files clean and organized by moving logic out of them.
+
+---------------------------------------------------------------
+
+Routes -> routes are the paths through which a client interacts with the server.
+       -> Routes typically correspond to HTTP methods like GET, POST, PUT, and DELETE.
+
+=======================[ COMMANDS ]=================
+
+npm init -y {initializes a new Node.js project in the current directory by 
+            creating a package.json file with default values.}
